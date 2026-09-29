@@ -5,12 +5,7 @@
 # Tech Stack — Beginner: Python, random, string Tech Stack — Advanced: Python, secrets (cryptographically secure), tkinter or PyQt5, pyperclip
 
 
-# Feature Checklist — Beginner Tier:
-# [ ] Prompt user to specify desired password length (minimum 8 characters enforced)
-# [ ] Prompt user to choose which character types to include: uppercase letters, lowercase letters, numbers, symbols (at least 2 types must be selected)
-# [ ] Generate and display a password matching all specified criteria
-# [ ] Input validation: reject invalid lengths or no character types selected
-# [ ] Option to generate another password without restarting the program
+
 
 
 # Feature Checklist — Advanced Tier (includes all Beginner features, plus):

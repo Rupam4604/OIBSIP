@@ -14,14 +14,6 @@
 # [ ] Option to generate another password without restarting the program
 
 
-# Feature Checklist — Advanced Tier (includes all Beginner features, plus):
-# [ ] GUI window with sliders or spinboxes for length control and checkboxes for character type selection
-# [ ] Use secrets module (not random) for cryptographically secure generation
-# [ ] Password strength indicator: display a visual bar or label showing strength (Weak / Medium / Strong) based on length and character diversity
-# [ ] Security rules enforced: generated password guaranteed to contain at least one character from each selected type
-# [ ] "Copy to Clipboard" button using pyperclip — password copies automatically on generation
-# [ ] Option to exclude ambiguous characters (e.g., 0, O, l, 1) via a checkbox
-# [ ] Generation history: display the last 5 generated passwords in the session (do not persist to file for security)
 
 
 # Self-Sourcing Guideline: Search "Python password generator tutorial random string" on YouTube for the beginner approach. For the advanced tier, search "Python tkinter password generator GUI" and "Python secrets module vs random". Reference the Python documentation for secrets (docs.python.org/3/library/secrets.html) — use it instead of random for anything security-related. For clipboard integration, search "pyperclip Python tutorial".

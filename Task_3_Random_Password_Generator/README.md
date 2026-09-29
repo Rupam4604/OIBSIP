@@ -439,6 +439,36 @@ Keep latest 5 passwords
   ↓
 Wait for next generation
 ```
+## 🖼️ Screenshots
+
+### Random Password Generator GUI
+
+![Random Password Generator](screenshots/01_password_generator.png)
+
+### Security Options
+
+![Security Options](screenshots/02_security_options.png)
+
+### Password History
+
+![Password History](screenshots/03_password_history.png)
+
+
+## 🎥 Demo Video
+
+
+▶️ [Watch the Random Password Generator Demo on LinkedIn](https://lnkd.in/p/d3_-nQDD)
+
+The demonstration shows:
+
+Beginner version
+Advanced GUI
+Password generation
+Password strength indicator
+Security options
+Clipboard functionality
+Password history
+
 
 ## 👨‍💻 Author
 

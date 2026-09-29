@@ -185,3 +185,15 @@ Through this project, I practiced and learned:
 A complete demonstration of the BMI Calculator, including the GUI, BMI calculation, database history, and BMI trend visualization.
 
 ▶️ [Watch the BMI Calculator Demo on LinkedIn](https://lnkd.in/p/dwAy5dXY)
+
+## 👨‍💻 Author
+
+**Rupam Ghosh**
+
+Electronics & Communication Engineering Graduate  
+Aspiring Embedded Systems & Robotics Engineer
+
+### 🔗 Connect With Me
+
+- GitHub: [Rupam4604](https://github.com/Rupam4604)
+- LinkedIn: [Rupam Ghosh](https://www.linkedin.com/in/rupam-ghosh-0406047119326s)
