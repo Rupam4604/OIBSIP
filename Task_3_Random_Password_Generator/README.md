@@ -1,38 +1,76 @@
-#  Random Password Generator
+# 🔐 Random Password Generator
 
-A Python-based Random Password Generator developed as part of my **Oasis Infobyte Python Programming Internship (OIBSIP)**.
+A Python-based **Random Password Generator** developed as part of my **Oasis Infobyte Python Programming Internship (OIBSIP)**.
 
-This project generates random and customizable passwords based on the character types selected by the user.
+This project includes both a **Beginner Command-Line version** and an **Advanced GUI version**. The application generates customizable passwords based on user-selected character types and includes security-focused features in the advanced version.
 
 ---
 
-##  Internship Task
+## 📌 Internship Task
 
 **Internship:** Python Programming Internship  
 **Organization:** Oasis Infobyte  
 **Task:** Task 3 – Random Password Generator  
-**Level:** Beginner  
+**Levels:** Beginner + Advanced  
 **Language:** Python
 
 ---
 
-##  Objective
+## 🎯 Objective
 
-The objective of this project is to create a command-line password generator that allows users to:
+The objective of this project is to build a password generator that allows users to:
 
-- Select the number of character types to use.
-- Choose uppercase letters, lowercase letters, numbers, and symbols.
 - Specify the desired password length.
-- Generate a random password.
-- Generate another password without restarting the program.
+- Select the character types to include.
+- Generate random passwords.
+- Guarantee that selected character types are represented.
+- Validate user input.
+- Generate multiple passwords.
+- Use cryptographically secure password generation in the advanced version.
+- Copy generated passwords to the clipboard.
+- Check password strength.
+- Maintain a temporary session history.
 
 ---
 
-##  Features
+# 📂 Project Versions
+
+This project contains two versions:
+
+### 🟢 Beginner Version
+
+A command-line application designed to demonstrate fundamental Python concepts such as:
+
+- Input handling
+- Functions
+- Loops
+- Conditional statements
+- Lists
+- String manipulation
+- Input validation
+- Random character selection
+
+### 🔵 Advanced Version
+
+A graphical password generator built with Tkinter and enhanced with security and usability features such as:
+
+- GUI interface
+- Secure password generation using `secrets`
+- Password strength indicator
+- Clipboard integration
+- Ambiguous-character exclusion
+- Session history
+- Guaranteed character-type inclusion
+
+---
+
+# ✨ Features
+
+## 🟢 Beginner Version Features
 
 ### Character Type Selection
 
-The user can select between **2 and 4 character types**:
+The user can select between **2 and 4 character types**.
 
 | Input | Character Type |
 |------|----------------|
@@ -41,9 +79,9 @@ The user can select between **2 and 4 character types**:
 | `N` | Numbers |
 | `S` | Symbols |
 
-Lowercase inputs are also accepted automatically.
+Lowercase inputs are automatically converted to uppercase.
 
-For example:
+Example:
 
 ```text
 u → U
@@ -52,86 +90,254 @@ n → N
 s → S
 ```
 
-##  Input Validation
+### Input Validation
 
 The program validates user input and prevents:
 
 - Invalid character types
 - Duplicate character type selections
-- Less than 2 character types
+- Fewer than 2 character types
 - More than 4 character types
 - Non-numeric input where numbers are required
 - Password lengths below 8 characters
 
-###  Random Password Generation
 
-The program uses Python's built-in random module to randomly select characters from the selected character pools.
+### Random Password Generation
+
+The Beginner version uses Python's built-in random module to select characters from the selected character pools.
 
 The generated password contains at least one character from every selected character type.
 
 For example, if the user selects:
 
-```text
+```
 U + L + N
 ```
-
 the generated password will contain at least:
 
-1 uppercase letter
-1 lowercase letter
-1 number
+- 1 uppercase letter
+- 1 lowercase letter
+- 1 number
 
 The remaining characters are selected randomly from the combined character pool.
 
-###  Generate Another Password
 
-After generating a password, the user can choose:
+### Generate Another Password
 
+The user can generate another password without restarting the application.
+```
 Y → Generate another password
+
 N → Exit
+```
+## Advanced Version Features
+### Graphical User Interface
 
-The program continues running until the user chooses to exit.
+The advanced version uses Tkinter to provide a graphical interface.
 
-### Technologies Used
+The GUI includes:
 
+- Password length control
+- Character type checkboxes
+- Security options
+- Generated password display
+- Password strength indicator
+- Generate button
+- Copy to Clipboard button
+- Password history
+
+
+### Password Length Control
+
+The advanced version provides a Spinbox for selecting password length.
+
+Supported range:
+```
+8 – 128 characters
+```
+
+A minimum length of 8 characters is enforced.
+
+### Character Type Selection
+
+Users can select:
+
+- Uppercase letters
+- Lowercase letters
+- Numbers
+- Symbols
+
+At least two character types must be selected.
+
+
+### Cryptographically Secure Generation
+
+Unlike the Beginner version, the Advanced version uses Python's:
+```
+secrets
+```
+module instead of:
+```
+random
+```
+The secrets module is designed for security-sensitive random values such as passwords and authentication tokens.
+
+Example:
+```
+secrets.choice(character_pool)
+```
+This provides a more security-focused approach to password generation.
+
+
+
+### Guaranteed Character-Type Inclusion
+
+The Advanced version guarantees that at least one character from every selected character type appears in the generated password.
+
+For example, if the user selects:
+```
+Uppercase
+Lowercase
+Numbers
+Symbols
+```
+the generated password will contain at least:
+```
+1 uppercase character
+1 lowercase character
+1 number
+1 symbol
+```
+The remaining characters are securely selected from the combined character pool.
+
+
+### Password Strength Indicator
+
+The application provides a visual password strength indicator:
+```
+Weak
+Medium
+Strong
+```
+Strength is determined using:
+
+- Password length
+- Character diversity
+
+A progress bar is also displayed to provide a visual representation of the password strength.
+
+
+### Copy to Clipboard
+
+The Advanced version uses the:
+```
+pyperclip
+```
+module to copy generated passwords to the system clipboard.
+
+The password is also automatically copied to the clipboard immediately after generation.
+
+Users can additionally use the:
+```
+ Copy to Clipboard
+```
+button.
+
+### Exclude Ambiguous Characters
+
+The application provides an option to exclude characters that can easily be confused visually.
+
+The excluded characters are:
+```
+0
+O
+l
+1
+```
+This can make passwords easier to manually read and type.
+
+### Password Generation History
+
+The Advanced version maintains a temporary session history containing the last 5 generated passwords.
+
+Example:
+```
+1. Xk8@pQ2#mL
+2. aT9$Lm4!Zx
+3. P7@vN2#qWs
+4. mK5!rT8$Yp
+5. Q2#xL9@Bn
+```
+#### Security Consideration
+
+The history is stored only in memory during the current application session.
+
+Passwords are:
+
+- Not written to a file
+- Not stored in a database
+- Not persisted after the application closes
+
+
+## Technologies Used
+### Beginner
 - Python
-- random module
-- string module
+- random
+- string
+### Advanced
+- Python
+- secrets
+- string
+- tkinter
+- pyperclip
 
-### Project Structure
-
-```text
+## Project Structure
+```
 Task_3_Random_Password_Generator/
 │
 ├── password_generator_beginner.py
+├── password_generator_advanced.py
 └── README.md
 ```
-### How to Run
 
-1. Make sure Python is installed
+## How to Run
+### 1. Check Python Installation
 
-- Check your Python installation:
-
-```text
- python --version
- ```
-
-2. Open the project folder
-
-```text
+Open a terminal and run:
+```
+python --version
+```
+### 2. Open the Project Folder
+```
 cd Task_3_Random_Password_Generator
 ```
-
-3. Run the program
-```text
+### 3. Run the Beginner Version
+```
 python password_generator_beginner.py
 ```
 
-### Example
+The command-line password generator will start.
+
+### 4. Install the Advanced Version Dependency
+
+The Advanced version uses pyperclip.
+Install it using:
 ```
-Enter how many character types you want to use (2-4): 3
+python -m pip install pyperclip
+```
+### 5. Run the Advanced Version
+```
+python password_generator_advanced.py
+```
+The graphical password generator will open.
+
+## Example — Beginner Version
+
+```
+Enter how many character types you want to use: 3
 
 ====== CHARACTER TYPE MENU ======
+
 Uppercase = U
 Lowercase = L
 Numbers   = N
@@ -142,12 +348,15 @@ Choose character type 2: L
 Choose character type 3: N
 
 Character types selected successfully!
+
 Selected types: ['U', 'L', 'N']
 
 Enter password length (minimum 8): 12
 
 ================================
+
 Generated Password: G7mK2pQ9xR4a
+
 ================================
 
 Generate another password? (Y/N): Y
@@ -157,15 +366,10 @@ Generated Password: aP8kL2xQ7mZ4
 Generate another password? (Y/N): N
 
 Thank you for using Password Generator!
-
+```
 The generated password will be different each time because the program uses random character selection.
 
-```
-### Program Logic
-
-
-The program follows this workflow:
-
+## Program Logic — Beginner Version
 ```
 Start
   ↓
@@ -194,9 +398,47 @@ Display password
 Generate another?
   ↓
 Yes → Generate again
-No  → Exit
+  ↓
+No → Exit
+
 ```
 
+## Program Logic — Advanced Version
+```
+Start
+  ↓
+Open Tkinter GUI
+  ↓
+Select password length
+  ↓
+Select character types
+  ↓
+Validate selections
+  ↓
+Select security options
+  ↓
+Build character pools
+  ↓
+Remove ambiguous characters if requested
+  ↓
+Guarantee one character from each selected type
+  ↓
+Generate remaining characters using secrets
+  ↓
+Securely shuffle password
+  ↓
+Calculate password strength
+  ↓
+Display password
+  ↓
+Automatically copy to clipboard
+  ↓
+Add password to session history
+  ↓
+Keep latest 5 passwords
+  ↓
+Wait for next generation
+```
 
 ## 👨‍💻 Author
 
